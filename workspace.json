@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "skeleton-portal": "apps/skeleton-portal",
+    "skeleton-portal-e2e": "apps/skeleton-portal-e2e"
+  }
+}

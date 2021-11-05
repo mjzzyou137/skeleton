@@ -1,0 +1,29 @@
+{
+  "root": "apps/skeleton-portal-e2e",
+  "sourceRoot": "apps/skeleton-portal-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/skeleton-portal-e2e/cypress.json",
+        "devServerTarget": "skeleton-portal:serve",
+        "tsConfig": "apps/skeleton-portal-e2e/tsconfig.json"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "skeleton-portal:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/skeleton-portal-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["skeleton-portal"]
+}
